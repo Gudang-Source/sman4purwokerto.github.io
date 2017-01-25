@@ -1,0 +1,121 @@
+LOG PERUBAHAN
+======================================================
+Versi 2.1.0 (15 April 2014)
+Perubahan
+- Update sistem keamanan data.
+- Update Captcha Pesan untuk menghindari spam,
+- Perbaikan fitur chat.
+- Perbaikan Data Guru.
+- Perbaikan Peta.
+- Perbaikan komentar.
+
+Penambahan
+- Multi Site, CMS Formulasi kini bisa digunakan untuk semua jenis website, tidak hanya website sekolah, antaralain : 
+  WEBSITE SEKOLAH, WEBSITE PONDOK PESANTREN, WEBSITE PERGURUAN TINGGI, INSTANSI/KANTOR/LEMBAGA PERUSAHAAN, KOMUNITAS, BLOG PRIBADI.
+- Halaman Data Profile
+- Terintegrasi Gmap Api V3 pada menu Peta
+- Token pada adminpanel
+- Pembatasan waktu login untuk admin
+- Guru dapat mengampu lebih dari 1 mata pelajaran
+- Tema Responsive (kompatibel dengan layar Laptop, Tablet, dan Smartphone)
+
+======================================================
+Versi 2.0.7
+Perubahan
+- Update sistem keamanan data
+- Captcha Login untuk menghindari spam
+- Blok Direktori link
+- Perubahan case konten dan modul
+- Kombinasi Huruf dan Angka pada username dan Password admin
+
+Penambahan
+- pengaturan Backup/Restore database
+- Sensor kata kotor pada form/form yang bersifat publik
+- Setting Level Admin yang bisa diatur sesuai kebutuhan, seperti Tata usaha, waka kurikulum, Waka kesiswaan.. dll dan hak akses bisa diatur dengan fleksibel
+- Modul Pangkat
+- Kategori link
+- Pindah Sekolah, Status Siswa, Pekerjaan Orangtua Siswa
+- Direktori link/tukar link
+- NISN pada siswa
+- NUPTK dan Pangkat/Golongan pada guru dan karyawan
+- NSSN, NIS, NSS, NIP Kepala Sekolah, Tahun Berdiri pada informasi sekolah
+- setting kelas ditambah Wali Kelas
+- Blok Kategori
+- Daftar isi web
+- 2 Tema Baru, Tema Simpel dan Tema elegan
+- Perbaikan tema adminpanel
+- Slideshow foto album
+
+======================================================
+Versi 2.0.6
+perubahan
+- migrasi TinyMCE ke CKEditor
+- Plugin CKEditor :
+  - video
+  - oembed
+  - equation
+- sistem upload CKEditor dengan KCFinder
+- Penambahan Judul dan Deskripsi galeri foto
+- Perbaikan Sistem Upload
+- Perbaikan Sistem Tema
+- Perbaikan Sistem Download
+- Elearning Evaluasi
+
+Penambahan
+- Pengaturan Install Blok
+- Blok Pilih Tema
+- Penambahan Modul Al Qur'an
+
+
+======================================================
+Versi 2.0.5
+perubahan
+- Perbaikan Sistem Upload
+
+======================================================
+Versi 2.0.4
+perubahan
+- Perbaikan modul Album Foto
+- Perbaikan sistem keamanan
+- support PHP 5.4.7
+
+======================================================
+Versi 2.0.3
+perubahan
+- Perubahan pada modul adminpanel
+
+======================================================
+Versi 2.0.2
+perubahan
+- Perubahan pada sistem sidebar Adminpanel
+
+
+======================================================
+Versi 2.0.1 
+perubahan
+- Perubahan pada sistem login
+
+
+======================================================
+Versi 2.0.0 
+perubahan
+- Perubahan keterangan installer
+- Struktur tema
+- Print Out PSB
+- Upload Foto Siswa
+- Pembetulan link berita terkait
+
+Penambahan
+- Instaler Plugin
+- Instaler Plugin
+- Intaller Tema
+- Modul Menu
+- Modul Blok
+- Upload Header
+
+
+======================================================
+Versi 1.0.0 s.d 1.9.0
+- Menu login
+- Penambahan Tema
+- 

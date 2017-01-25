@@ -1,0 +1,31 @@
+User-agent: Googlebot
+Disallow: /*.php$
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*?
+Disallow: /*/2$
+Disallow: /*/3$
+Disallow: /*/4$
+Disallow: /*/5$
+Disallow: /*/6$
+Disallow: /*/7$
+Disallow: /*/8$
+
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: duggmirror
+Disallow: /
+
+User-agent: *
+Disallow: /adminpanel/
+Disallow: /file/
+Disallow: /kontenweb/
+Disallow: /cgi-bin/
+Disallow: /konfigurasi/
+Disallow: /eksternal/
+
+
+Sitemap: sitemap.xml
+Sitemap: rss.php

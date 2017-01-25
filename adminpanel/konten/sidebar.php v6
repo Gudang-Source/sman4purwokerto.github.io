@@ -1,0 +1,96 @@
+<?php 
+/* Forum Multimedia Edukasi www. formulasi.or.id cms.formulasi.or.id
+ * @copyright	Copyright (C) 2013 CMS Formulasi Open Source, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * Ari Rusmanto ariecupu@ymail.com
+ * Fauzan A Mahanani fauzan.mahanani@formulasi.or.id
+ */
+					
+									?>
+									
+<div style="width:200px;height:500px;overflow:scroll;position: fixed ;	">
+			<div class="menu"><div class="isimenuHome"><a href="index.php">Beranda</a></div></div>
+	<div class="menu"><div class="isimenuInformasi"><a href="informasi_sekolah.php">Informasi Sekolah</a></div></div>
+<?php
+				$modul2=mysql_query("SELECT * FROM ".$DB_KODE."_modul WHERE status=1");		
+		while($r2=mysql_fetch_array($modul2)){
+?>
+
+
+		<?php  if($r2['folder_modul']=='berita'){ ?>
+<div class="menu"><div class="isimenuBerita"><a href="berita.php">Berita</a></div></div>
+		<?php  }elseif($r2['folder_modul']=='guru'){ ?>	
+<div class="menu"><div class="isimenuGuru"><a href="guru_staff.php">Guru dan Staff</a></div></div>	
+		<?php  }elseif($r2['folder_modul']=='siswa'){ ?>	
+<div class="menu"><div class="isimenuSiswa"><a href="siswa.php">Siswa</a></div></div>	
+		<?php  }elseif($r2['folder_modul']=='materi'){ ?>	
+		 
+		<?php 		$dir='elearning';
+				$plugin=mysql_query("SELECT * FROM ".$DB_KODE."_plugin WHERE folder_plugin='$dir' and status=1 limit 1");		
+				$r2s=mysql_fetch_array($plugin);
+				if($r2s['status']==1){		
+		?>		
+<div class="menu"><div class="isimenuMapel "><a href="pbm.php">Pembelajaran</a></div></div>	
+				<?php  }else{ ?>	
+<div class="menu"><div class="isimenuMapel "><a href="materi.php">Pembelajaran</a></div></div>		
+				<?php  } ?>				 
+
+		<?php  }elseif($r2['folder_modul']=='psb'){ ?>	
+ <div class="menu"><div class="isimenuPSB"><a href="psb_online.php">PSB Online</a></div></div>	
+		<?php  }elseif($r2['folder_modul']=='album'){ ?>	
+ <div class="menu"><div class="isimenuAlbum"><a href="album_galeri.php">Album Galeri</a></div></div>
+		<?php  }elseif($r2['folder_modul']=='buku'){ ?>	
+ <div class="menu"><div class="isimenuBuku"><a href="buku_tamu.php">Buku Tamu</a></div></div>
+		<?php  }else{ ?>
+ <div class="menu"><div class="isimenu"><a href="<?php echo $r2['folder_modul']; ?>.php"><?php echo $r2['folder_modul']; ?></a></div></div>
+		<?php  }
+		  ?>	
+<?php  } ?>			
+
+<?php
+				$plugin=mysql_query("SELECT * FROM ".$DB_KODE."_plugin WHERE status=1");		
+		while($pi=mysql_fetch_array($plugin)){
+		?>
+<?php  if($pi['folder_plugin']=='import'){}elseif($pi['folder_plugin']=='elearning'){}
+elseif($pi['folder_plugin']=='raport'){}
+elseif($pi['folder_plugin']=='jadwal'){}
+elseif($pi['folder_plugin']=='raport'){}
+elseif($pi['folder_plugin']=='un'){}
+elseif($pi['folder_plugin']=='ekstra'){}
+elseif($pi['folder_plugin']=='perpustakaan'){}
+elseif($pi['folder_plugin']=='sarana'){}
+elseif($pi['folder_plugin']=='prakerin'){}
+elseif($pi['folder_plugin']=='bkk'){}
+elseif($pi['folder_plugin']=='up'){}
+elseif($pi['folder_plugin']=='dudi'){}
+else{ ?>
+				
+<div class="menu"><div class="isimenu"><a href="<?php echo $pi['folder_plugin']; ?>.php"><?php echo $pi['folder_plugin']; ?></a></div></div>
+			
+<?php		}}
+?>
+			<?php     if($_SESSION['leveluser']=='0'){ ?>						
+			<div class="menu"><div class="isimenuAdmin"><a href="admin.php">Menejemen Admin</a></div></div>
+			<?php     } ?>			
+<div class="menu"><div class="isimenuPengaturan"><a href="pengaturan.php">Pengaturan</a></div></div>
+
+			<hr>
+			<div class="menu"><div class="isimenuPengaturan"><center><B>PLUGIN PREMIUM</center></b></div></div>
+			
+<div class="menu"><div class="isimenuImport"><a href="import.php">Import Data</a></div></div>
+		
+<div class="menu"><div class="isimenuJadwal"><a href="jadwal.php">Jadwal Pelajaran</a></div></div>
+<div class="menu"><div class="isimenuRaport"><a href="raport.php">Raport</a></div></div>
+<div class="menu"><div class="isimenuUN"><a href="un.php">Ujian Nasional</a></div></div>				
+<div class="menu"><div class="isimenuEkstra"><a href="ekstra.php">Ekstrakurikuler</a></div></div>	
+<div class="menu"><div class="isimenuPerpus"><a href="perpustakaan.php">Perpustakaan</a></div></div>	
+<div class="menu"><div class="isimenuSarpras"><a href="sarana.php">Sarana Prasarana</a></div></div>	
+			
+<div class="menu"><div class="isimenuPrakerin"><a href="prakerin.php">Prakerin</a></div></div>
+<div class="menu"><div class="isimenuBKK"><a href="bkk.php">Bursa Kerja Khusus</a></div></div>
+<div class="menu"><div class="isimenuUP"><a href="up.php">Unit Produksi</a></div></div>
+<div class="menu"><div class="isimenuDUDI"><a href="dudi.php">Du/Di</a></div></div>
+			
+</div>	
+	
+			
